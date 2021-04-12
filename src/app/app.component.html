@@ -1,2 +1,8 @@
-<h1>{{ title }}</h1>
-<!-- interpolation -->
+<app-ui>
+  <!-- ici qu'on trouve le html de ui.component.html -->
+  <!-- je peux projetter des templates (ensembles html, ou des webcomponent dans le template ui.component.html à l'aide de la directive ng-content) -->
+  <app-header class="tr-header"></app-header>
+  <app-nav class="tr-nav"></app-nav>
+  <app-footer class="tr-footer"></app-footer>
+  <div class="tr-content">contenu de mes pages en fonction d'une route</div>
+</app-ui>

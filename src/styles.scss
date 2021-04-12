@@ -5,3 +5,10 @@
 @import "src/stylings/theme";
 @import "src/stylings/layout";
 @import "src/stylings/fonts";
+html,
+body {
+  height: 100%;
+}
+// jamais jamais jamais écrire de css à cause :
+// risque de  régression trop élevé car aucune encapsulation
+// difficile à maintenir, à réutiliser
