@@ -1,0 +1,6 @@
+☐ Directive d'attribut et event binding sur ui
+  ☐ ajouter un icon (click) = toggle() qui va ouvrir ou fermer le menu
+  ☐ cette fn fait passer un boolean à not boolean
+  ☐ ajouter ou supprimer une class dans uicomponent.html sur la balise main pour en css fermer ou ouvrir le menu
+
+

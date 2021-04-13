@@ -37,7 +37,8 @@ aside {
 }
 
 .shadow {
-  background: rgba(var(--app-dark), 0.8);
+  background: var(--app-dark);
+  opacity: 0.8;
   width: 100%;
   min-height: 100vh;
   z-index: 1000;
