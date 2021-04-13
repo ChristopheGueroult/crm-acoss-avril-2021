@@ -1,6 +1,11 @@
 <header class="fixed-top">
   <!-- ajouter un icon pour ouvrir ou fermer le menu de navigation -->
-  <app-icon-nav (click)="toggle()"></app-icon-nav>
+  <span *ngIf="!open"  (click)="toggle()">
+    <ng-content  select=".tr-icon-open"></ng-content>
+  </span>
+  <span *ngIf="open"  (click)="toggle()">
+    <ng-content select=".tr-icon-close"></ng-content>
+  </span>
   <!-- projetter header.component.html ici à l'aide d'une transclusion -->
   <ng-content select=".tr-header"></ng-content>
 </header>
