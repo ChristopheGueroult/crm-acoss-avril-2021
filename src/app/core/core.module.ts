@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { IconsModule } from '../icons/icons.module';
 import { LoginModule } from '../login/login.module';
 import { TemplatesModule } from '../templates/templates.module';
@@ -10,7 +11,7 @@ import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [HeaderComponent, NavComponent, FooterComponent],
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   exports: [
     LoginModule,
     IconsModule,
