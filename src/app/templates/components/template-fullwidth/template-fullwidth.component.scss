@@ -1,0 +1,9 @@
+@import "~src/stylings/layout";
+
+.bandeau {
+  background: var(--app-primary);
+  padding: $gutter;
+  h1 {
+    color: var(--app-light);
+  }
+}

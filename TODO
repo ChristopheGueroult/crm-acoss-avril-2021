@@ -4,3 +4,12 @@
   ☐ ajouter ou supprimer une class dans uicomponent.html sur la balise main pour en css fermer ou ouvrir le menu
 
 
+☐ PAGE LIST ORDERS
+  ☐ ajouter une collection orders à l'aide d'un table-light component
+  ☐ une api
+  ☐ une collection orders
+  ☐ une interface pour les orders
+  ☐ un model order (class)
+  ☐ enum state d'un order
+  ☐ faire un appel http pour get notre collection
+
