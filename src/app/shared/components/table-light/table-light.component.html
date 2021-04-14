@@ -1,1 +1,10 @@
-<p>table-light works!</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" *ngFor="let item of headers">{{ item }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-content></ng-content>
+  </tbody>
+</table>
