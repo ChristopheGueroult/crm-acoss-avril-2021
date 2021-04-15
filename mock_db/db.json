@@ -4,7 +4,7 @@
       "tjmHt": 1200,
       "nbJours": 5,
       "tva": 20,
-      "state": "CONFIRMED",
+      "state": "OPTION",
       "typePresta": "formation",
       "client": "Modis2",
       "comment": "dsfhgshgfgh",
@@ -14,7 +14,7 @@
       "tjmHt": 1200,
       "nbJours": 5,
       "tva": 20,
-      "state": "CANCELED",
+      "state": "OPTION",
       "typePresta": "formation",
       "client": "M2i2",
       "comment": "dsfhgshgfgh",
@@ -49,6 +49,36 @@
       "client": "test",
       "comment": null,
       "id": 7
+    },
+    {
+      "tjmHt": 1200,
+      "nbJours": 100,
+      "tva": 20,
+      "state": "OPTION",
+      "typePresta": "formation",
+      "client": "Capgemini",
+      "comment": "Merci capgemini pour les 120 k",
+      "id": 8
+    },
+    {
+      "tjmHt": 1200,
+      "nbJours": 100,
+      "tva": 20,
+      "state": "OPTION",
+      "typePresta": "formation",
+      "client": "Modis",
+      "comment": "Merci capgemini pour les 120 k",
+      "id": 9
+    },
+    {
+      "tjmHt": 1200,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "OPTION",
+      "typePresta": "formation",
+      "client": "M2i",
+      "comment": null,
+      "id": 10
     }
   ],
   "clients": [

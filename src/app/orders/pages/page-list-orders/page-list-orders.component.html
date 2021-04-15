@@ -9,11 +9,14 @@
       <td>{{ item.tjmHt | currency }}</td>
       <td>{{ item.tjmHt | total: item.nbJours | currency }}</td>
       <td>{{ item.tjmHt | total: item.nbJours: item.tva | currency }}</td>
-      <td>
+      <td [appState]="item.state">
         <select (change)="changeState(item, $event)">
           <option *ngFor="let state of states" [value]="state" [selected]="item.state === state">{{ state }}</option>
         </select>
       </td>
     </tr>
   </app-table-light>
+
+  <app-btn route="add" label="Add order"></app-btn>
+  <app-btn hrefLink="http://coderbase.io" label="Coderbase"></app-btn>
 </app-template-fullwidth>

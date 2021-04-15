@@ -1,1 +1,9 @@
-<p>btn works!</p>
+<ng-container *ngIf="route; then redirect; else link"></ng-container>
+
+<ng-template #redirect>
+  <a [routerLink]="route">{{ label }}</a>
+</ng-template>
+
+<ng-template #link>
+  <a [href]="hrefLink">{{ label }}</a>
+</ng-template>
