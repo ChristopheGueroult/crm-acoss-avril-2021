@@ -16,6 +16,7 @@ export class PageAddOrderComponent implements OnInit {
   public add(item: Order): void {
     this.ordersService.add(item).subscribe((res) => {
       // traiter ici les reponses de l'api
+      this.ordersService.myMsg = 'Order added correctly';
       this.router.navigate(['orders']);
     });
   }

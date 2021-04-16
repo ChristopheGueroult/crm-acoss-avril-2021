@@ -13,3 +13,25 @@
   ☐ enum state d'un order
   ☐ faire un appel http pour get notre collection
 
+TP edit
+☐ page list order html
+  ☐ ajouter une colone action au debut du tableau
+  ☐ ajouter un td dans chaque tr avec un icon edit
+  ☐ click = goToEdit(item.id)
+☐ page list order ts
+  ☐ déclarer la fn goToEdit(id: number) {rediriger vers la route orders/edit/1}
+☐ orders routing ts
+  ☐ modifier la route edit pour qu'elle accepte un parametre id
+☐ page edit order ts
+  ☐ récupérer l'id dans l'url (ActivatedRoute et un observable)
+  ☐ appeler ordersService.getItemById(id).subscribe(...res ) et initialiser une variable item avec la réponse de l'api
+  ☐ ou alors : encore mieux : initialiser une variable item$ avec this.ordersService.getItemById(1) pour avoir
+  ☐ un observable et utiliser le pipe async dans le html pour y souscrire ()
+☐ orders service ts
+  ☐ déclarer la fn getItemById qui fait l'appel http pour récupérer un item à partir de son id
+☐ Page edit order html
+  ☐ on utiliser template container avec un nouveau title
+  ☐ on utilise le form order (attention de ne pas binder init avec undefined)
+
+  ☐ generer une doc
+  ☐ webpack bundle analyzer

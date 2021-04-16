@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class OrdersService {
+  private msg!: string;
   public testObservable$ = new Observable((listX) => {
     listX.next('test');
   });
@@ -16,8 +17,6 @@ export class OrdersService {
   private collection$!: Observable<Order[]>;
   private urlApi = environment.urlApi;
   constructor(private http: HttpClient) {
-    console.log('mon service instancied');
-
     this.collection = this.http.get<Order[]>(`${this.urlApi}/orders`);
   }
 
@@ -28,6 +27,9 @@ export class OrdersService {
   public set collection(col: Observable<Order[]>) {
     this.collection$ = col;
   }
+  public set myMsg(param: string) {
+    this.msg = param;
+  }
 
   // public get collection
   // public getCollection(): Observable<Order[]> {
@@ -36,10 +38,13 @@ export class OrdersService {
   public get collection(): Observable<Order[]> {
     return this.collection$;
   }
+  public get myMsg(): string {
+    return this.msg;
+  }
 
   // public change state
   public changeState(item: Order, state: StateOrder): Observable<Order> {
-    const obj = {...item};
+    const obj = { ...item };
     obj.state = state;
     return this.update(obj);
   }
@@ -57,4 +62,7 @@ export class OrdersService {
   // public delete item in collection
 
   // public get item by id in collection
+  public getItemById(id: number): Observable<Order> {
+    return this.http.get<Order>(`${this.urlApi}/orders/${id}`);
+  }
 }

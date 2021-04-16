@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { StateOrder } from 'src/app/core/enums/state-order.enum';
 import { Order } from 'src/app/core/models/order';
@@ -10,6 +11,7 @@ import { OrdersService } from '../../services/orders.service';
   styleUrls: ['./page-list-orders.component.scss'],
 })
 export class PageListOrdersComponent implements OnInit {
+  public msg!: string | null;
   public states = Object.values(StateOrder);
   public title = 'List orders';
   // public collection!: Order[];
@@ -18,8 +20,10 @@ export class PageListOrdersComponent implements OnInit {
   // private sub: Subscription;
   constructor(
     private ordersService: OrdersService,
-    private cd: ChangeDetectorRef
+    private cd: ChangeDetectorRef,
+    private router: Router
   ) {
+    this.msg = this.ordersService.myMsg;
     // this.sub = this.ordersService.testObservable$.subscribe((data) => {
     //   // console.log(data);
     // });
@@ -28,6 +32,7 @@ export class PageListOrdersComponent implements OnInit {
     //   this.collection = data;
     // });
     this.headers = [
+      'Action',
       'Type',
       'Client',
       'Nb Jours',
@@ -51,6 +56,14 @@ export class PageListOrdersComponent implements OnInit {
       // lancer manuellement un change detection
       this.cd.detectChanges();
     });
+  }
+
+  public close() {
+    this.msg = null;
+  }
+
+  public goToEdit(id: number): void {
+    this.router.navigate(['orders', 'edit', id]);
   }
 
   // ngOnDestroy(): void {
