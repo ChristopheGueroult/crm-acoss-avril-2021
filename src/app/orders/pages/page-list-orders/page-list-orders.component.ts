@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { StateOrder } from 'src/app/core/enums/state-order.enum';
 import { Order } from 'src/app/core/models/order';
 import { OrdersService } from '../../services/orders.service';
@@ -15,7 +15,7 @@ export class PageListOrdersComponent implements OnInit {
   public states = Object.values(StateOrder);
   public title = 'List orders';
   // public collection!: Order[];
-  public collection$: Observable<Order[]>;
+  public collection$: BehaviorSubject<Order[]>;
   public headers!: string[];
   // private sub: Subscription;
   constructor(
@@ -64,6 +64,12 @@ export class PageListOrdersComponent implements OnInit {
 
   public goToEdit(id: number): void {
     this.router.navigate(['orders', 'edit', id]);
+  }
+
+  public delete(id: number): void {
+    this.ordersService.delete(id).subscribe((res) => {
+      console.log(res);
+    })
   }
 
   // ngOnDestroy(): void {

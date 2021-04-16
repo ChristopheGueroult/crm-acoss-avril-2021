@@ -2,43 +2,13 @@
   "orders": [
     {
       "tjmHt": 1200,
-      "nbJours": 5,
-      "tva": 20,
-      "state": "OPTION",
-      "typePresta": "formation1",
-      "client": "Modis2",
-      "comment": "dsfhgshgfgh",
-      "id": 1
-    },
-    {
-      "tjmHt": 1200,
-      "nbJours": 5,
-      "tva": 20,
-      "state": "OPTION",
-      "typePresta": "formation",
-      "client": "M2i2",
-      "comment": "dsfhgshgfgh",
-      "id": 2
-    },
-    {
-      "tjmHt": 1200,
       "nbJours": 20,
       "tva": 20,
       "state": "CONFIRMED",
-      "typePresta": "Coaching2",
+      "typePresta": "Coaching3",
       "client": "YouAnd",
       "comment": "gracias mucho !",
       "id": 5
-    },
-    {
-      "tjmHt": 1200,
-      "nbJours": 1,
-      "tva": 20,
-      "state": "OPTION",
-      "typePresta": "formation",
-      "client": "sdhg",
-      "comment": "fdgh",
-      "id": 6
     },
     {
       "tjmHt": 1200,
@@ -96,7 +66,7 @@
       "tva": 20,
       "state": "OPTION",
       "typePresta": "formation",
-      "client": "M2i",
+      "client": "Capgemini",
       "comment": null,
       "id": 12
     }

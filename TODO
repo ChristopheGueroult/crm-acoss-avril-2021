@@ -35,3 +35,12 @@ TP edit
 
   ☐ generer une doc
   ☐ webpack bundle analyzer
+
+  ☐ TP DELETE
+    ☐ page list orders html
+      ☐ ajouter dans le td action un icon-delete
+    ☐ page list orders ts
+      ☐ sur cet icon (click)="delete(item.id)"
+      ☐ declarer fn delete(id:number) on va faire un subscribe de this.ordersServicce.detete(id)
+    ☐ orders service ts
+      ☐ declarer la fn delete(id: number) {http.delete}
